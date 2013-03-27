@@ -7,7 +7,7 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuBar1MouseClicked"/>
       </Events>
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" name="GesEtabli">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gestion &#xe9;tablisements"/>
           </Properties>

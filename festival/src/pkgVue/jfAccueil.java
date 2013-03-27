@@ -27,7 +27,7 @@ public class jfAccueil extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
+        GesEtabli = new javax.swing.JMenu();
         jMenu9 = new javax.swing.JMenu();
         jMenu11 = new javax.swing.JMenu();
         jMenu12 = new javax.swing.JMenu();
@@ -52,21 +52,21 @@ public class jfAccueil extends javax.swing.JFrame {
             }
         });
 
-        jMenu2.setText("Gestion établisements");
+        GesEtabli.setText("Gestion établisements");
 
         jMenu9.setText("Voir");
-        jMenu2.add(jMenu9);
+        GesEtabli.add(jMenu9);
 
         jMenu11.setText("Ajouter");
-        jMenu2.add(jMenu11);
+        GesEtabli.add(jMenu11);
 
         jMenu12.setText("Modifier");
-        jMenu2.add(jMenu12);
+        GesEtabli.add(jMenu12);
 
         jMenu10.setText("Supprimer");
-        jMenu2.add(jMenu10);
+        GesEtabli.add(jMenu10);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(GesEtabli);
 
         jMenu5.setText("Gestion types chambres");
 
@@ -159,6 +159,7 @@ public class jfAccueil extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu GesEtabli;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu12;
@@ -169,7 +170,6 @@ public class jfAccueil extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu17;
     private javax.swing.JMenu jMenu18;
     private javax.swing.JMenu jMenu19;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu20;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
