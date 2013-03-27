@@ -34,7 +34,7 @@
             </Menu>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu5">
+        <Menu class="javax.swing.JMenu" name="GestChambres">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gestion types chambres"/>
           </Properties>
