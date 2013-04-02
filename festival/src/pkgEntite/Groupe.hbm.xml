@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2013 16:00:27 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pkgEntite.Groupe" table="GROUPE" schema="FEST_ADMIN">
+        <id name="id" type="string">
+            <column name="ID" length="4" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="string">
+            <column name="NOM" length="40" not-null="true" />
+        </property>
+        <property name="identiteresponsable" type="string">
+            <column name="IDENTITERESPONSABLE" length="40" />
+        </property>
+        <property name="adressepostale" type="string">
+            <column name="ADRESSEPOSTALE" length="120" />
+        </property>
+        <property name="nombrepersonnes" type="big_decimal">
+            <column name="NOMBREPERSONNES" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nompays" type="string">
+            <column name="NOMPAYS" length="40" not-null="true" />
+        </property>
+        <property name="hebergement" type="char">
+            <column name="HEBERGEMENT" length="1" not-null="true" />
+        </property>
+        <set name="attributions" inverse="true">
+            <key>
+                <column name="IDGROUPE" length="4" not-null="true" />
+            </key>
+            <one-to-many class="pkgEntite.Attribution" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2013 16:00:27 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pkgEntite.Etablissement" table="ETABLISSEMENT" schema="FEST_ADMIN">
+        <id name="id" type="string">
+            <column name="ID" length="8" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="string">
+            <column name="NOM" length="45" not-null="true" />
+        </property>
+        <property name="adresserue" type="string">
+            <column name="ADRESSERUE" length="45" not-null="true" />
+        </property>
+        <property name="codepostal" type="string">
+            <column name="CODEPOSTAL" length="5" not-null="true" />
+        </property>
+        <property name="ville" type="string">
+            <column name="VILLE" length="35" not-null="true" />
+        </property>
+        <property name="tel" type="string">
+            <column name="TEL" length="13" not-null="true" />
+        </property>
+        <property name="adresseelectronique" type="string">
+            <column name="ADRESSEELECTRONIQUE" length="70" />
+        </property>
+        <property name="type" type="big_decimal">
+            <column name="TYPE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="civiliteresponsable" type="string">
+            <column name="CIVILITERESPONSABLE" length="12" not-null="true" />
+        </property>
+        <property name="nomresponsable" type="string">
+            <column name="NOMRESPONSABLE" length="25" not-null="true" />
+        </property>
+        <property name="prenomresponsable" type="string">
+            <column name="PRENOMRESPONSABLE" length="25" />
+        </property>
+        <set name="offres" inverse="true">
+            <key>
+                <column name="IDETAB" length="8" not-null="true" />
+            </key>
+            <one-to-many class="pkgEntite.Offre" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2013 16:00:27 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pkgEntite.Attribution" table="ATTRIBUTION" schema="FEST_ADMIN">
+        <composite-id name="id" class="pkgEntite.AttributionId">
+            <key-property name="idetab" type="string">
+                <column name="IDETAB" length="8" />
+            </key-property>
+            <key-property name="idtypechambre" type="string">
+                <column name="IDTYPECHAMBRE" length="2" />
+            </key-property>
+            <key-property name="idgroupe" type="string">
+                <column name="IDGROUPE" length="4" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="groupe" class="pkgEntite.Groupe" update="false" insert="false" fetch="select">
+            <column name="IDGROUPE" length="4" not-null="true" />
+        </many-to-one>
+        <many-to-one name="offre" class="pkgEntite.Offre" update="false" insert="false" fetch="select">
+            <column name="IDETAB" length="8" not-null="true" />
+            <column name="IDTYPECHAMBRE" length="2" not-null="true" />
+        </many-to-one>
+        <property name="nombrechambres" type="big_decimal">
+            <column name="NOMBRECHAMBRES" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

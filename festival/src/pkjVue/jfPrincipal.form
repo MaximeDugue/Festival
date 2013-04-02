@@ -3,96 +3,101 @@
 <Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuBar1MouseClicked"/>
-      </Events>
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="GesEtabli">
+        <Menu class="javax.swing.JMenu" name="jmAccueil">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Gestion &#xe9;tablisements"/>
+            <Property name="text" type="java.lang.String" value="Accueil"/>
+          </Properties>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jmEtablissement">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gestion &#xe9;tablissement"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu9">
+            <MenuItem class="javax.swing.JMenuItem" name="jmiEvoir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Voir"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu11">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiEajouter">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ajouter"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu12">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiEmodifier">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modifier"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu10">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiEsupprimer">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Supprimer"/>
               </Properties>
-            </Menu>
+            </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="GestChambres">
+        <Menu class="javax.swing.JMenu" name="jmTypeChambre">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Gestion types chambres"/>
+            <Property name="text" type="java.lang.String" value="Gestion type de chambre"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu13">
+            <MenuItem class="javax.swing.JMenuItem" name="jmiTvoir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Voir"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu14">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiTajouter">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ajouter"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu15">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiTmodifier">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modifier"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu16">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiTmodifierActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiTsupprimer">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Supprimer"/>
               </Properties>
-            </Menu>
+            </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu6">
+        <Menu class="javax.swing.JMenu" name="jmHebergement">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Offre h&#xe9;bergement"/>
+            <Property name="text" type="java.lang.String" value="Offre hebergement"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu18">
+            <MenuItem class="javax.swing.JMenuItem" name="jmiHvoir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Voir"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu17">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiHmodifier">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modifier"/>
               </Properties>
-            </Menu>
+            </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu7">
+        <Menu class="javax.swing.JMenu" name="jmChambres">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Attribution chambre"/>
+            <Property name="text" type="java.lang.String" value="Attribution Chambres"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu19">
+            <MenuItem class="javax.swing.JMenuItem" name="jmiCvoir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Voir"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu20">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jmiCmodifier">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modifier"/>
               </Properties>
-            </Menu>
+            </MenuItem>
           </SubComponents>
         </Menu>
       </SubComponents>
@@ -120,12 +125,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="522" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="815" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="348" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="358" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
