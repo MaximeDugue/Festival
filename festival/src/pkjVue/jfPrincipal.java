@@ -65,6 +65,11 @@ public class jfPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jmAccueil.setText("Accueil");
+        jmAccueil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmAccueilActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jmAccueil);
 
         jmEtablissement.setText("Gestion établissement");
@@ -153,8 +158,13 @@ public class jfPrincipal extends javax.swing.JFrame {
     private void jmiTvoirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTvoirActionPerformed
         // TODO add your handling code here:
         this.setContentPane(jpnlTypeChambre);
+        jpnlTypeChambre.jtblTypeChambreAction();
         pack();
     }//GEN-LAST:event_jmiTvoirActionPerformed
+
+    private void jmAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAccueilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmAccueilActionPerformed
 
     /**
      * @param args the command line arguments
