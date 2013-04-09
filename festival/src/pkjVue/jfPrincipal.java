@@ -4,12 +4,18 @@
  */
 package pkjVue;
 
+import org.hibernate.Session;
+import pkgEntite.HibernateUtil;
+
 /**
  *
  * @author etudSIO
  */
 public class jfPrincipal extends javax.swing.JFrame {
-
+    
+    //Déclaration d'une session commune aux différents interfaces
+        private static Session session= HibernateUtil.getSessionFactory().openSession();
+        
     /**
      * Creates new form jfPrincipal
      */
@@ -17,6 +23,16 @@ public class jfPrincipal extends javax.swing.JFrame {
         initComponents();
     }
 
+    public static Session getSession() {
+        return session;
+    }
+
+    public static void setSession(Session psession) {
+        jfPrincipal.session = psession;
+    }
+
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
