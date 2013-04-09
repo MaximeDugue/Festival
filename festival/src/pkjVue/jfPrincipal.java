@@ -12,7 +12,8 @@ import pkgEntite.HibernateUtil;
  * @author etudSIO
  */
 public class jfPrincipal extends javax.swing.JFrame {
-    
+    //déclaration d'un panel
+    protected jpTypeChambre jpnlTypeChambre= new jpTypeChambre();
     //Déclaration d'une session commune aux différents interfaces
         private static Session session= HibernateUtil.getSessionFactory().openSession();
         
@@ -85,6 +86,11 @@ public class jfPrincipal extends javax.swing.JFrame {
         jmTypeChambre.setText("Gestion type de chambre");
 
         jmiTvoir.setText("Voir");
+        jmiTvoir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiTvoirActionPerformed(evt);
+            }
+        });
         jmTypeChambre.add(jmiTvoir);
 
         jmiTajouter.setText("Ajouter");
@@ -141,7 +147,14 @@ public class jfPrincipal extends javax.swing.JFrame {
 
     private void jmiTmodifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTmodifierActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jmiTmodifierActionPerformed
+
+    private void jmiTvoirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTvoirActionPerformed
+        // TODO add your handling code here:
+        this.setContentPane(jpnlTypeChambre);
+        pack();
+    }//GEN-LAST:event_jmiTvoirActionPerformed
 
     /**
      * @param args the command line arguments

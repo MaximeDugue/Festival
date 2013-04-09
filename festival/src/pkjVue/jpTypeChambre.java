@@ -4,8 +4,12 @@
  */
 package pkjVue;
 
+import java.util.Iterator;
+import javax.swing.table.DefaultTableModel;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import pkgEntite.HibernateUtil;
+import pkgEntite.Typechambre;
 import pkjVue.jfPrincipal;
 
 /**
@@ -13,16 +17,17 @@ import pkjVue.jfPrincipal;
  * @author etudSIO
  */
 public class jpTypeChambre extends javax.swing.JPanel {
-   
+   private boolean bCharge = false; //utilisé lors du chargement de la liste déroulante
+   private Typechambre unType;
     /**
      * Creates new form jpTypeChambre
      */
     
     public jpTypeChambre() {
         initComponents();
-     
+        
     }
-
+    
     
     public void jtblTypeChambreAction(java.awt.event.ActionEvent evt){
         String sCode;
@@ -32,11 +37,19 @@ public class jpTypeChambre extends javax.swing.JPanel {
         int i;
         sQuery="From Typechambre";
         jfPrincipal.getSession().beginTransaction();
-        
-        
-        
-        
+        Query q=jfPrincipal.getSession().createQuery(sQuery);
+        //inbligne= untype.get
+        Iterator par= q.iterate();
+        while(par.hasNext()){
+            Typechambre unType = (Typechambre) par.next();
+            ((DefaultTableModel)jtblTypeChambre.getModel()).addRow(new Object[] 
+            {unType.getId(), unType.getLibelle(), unType.getOffres()});
         }
+        }
+        
+        
+        
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,15 +68,15 @@ public class jpTypeChambre extends javax.swing.JPanel {
 
         jtblTypeChambre.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Code", "Nombre de liits"
+                "Code", "Nombre de lits", "Offres"
             }
         ));
         jScrollPane1.setViewportView(jtblTypeChambre);
